@@ -1,6 +1,6 @@
 import './TodoInput.css';
 import { useState } from 'react';
-import { PlusIcon } from '@heroicons/react/24/solid'
+import { PlusIcon } from '@heroicons/react/24/outline'
 import { v4 } from "uuid";
     
 function TodoInput({ todos, setTodos }) {
@@ -27,7 +27,7 @@ function TodoInput({ todos, setTodos }) {
     
     //console.log(todo);
     return(
-        <div>
+        <div className='todo-input-wrapper'>
             <input type="Text" value={todo} onChange={(event) => {
                
                     setTodo(event.target.value);
@@ -35,7 +35,7 @@ function TodoInput({ todos, setTodos }) {
             }} />
             
             <button onClick={handleClick}>
-                <PlusIcon style={{ width: "20px",height:"20px"}} />
+                <PlusIcon className='plus-icon' />
             </button>
         </div>
        
