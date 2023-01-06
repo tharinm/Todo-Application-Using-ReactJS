@@ -9,16 +9,24 @@ function TodoInput({ todos, setTodos }) {
     
     const handleClick = () => {
       
-        const newTodo = {
-            id: v4(),
-            name: todo,
-            isCompleted: false,
-        };
+        if (todo.length > 0) {
+        
+            const newTodo = {
+                id: v4(),
+                name: todo,
+                isCompleted: false,
+            };
 
-        const newTodos = [...todos, newTodo];
-        setTodos(newTodos);
-        setTodo(" ");
-        //   console.log(newTodos);
+            const newTodos = [...todos, newTodo];
+            setTodos(newTodos);
+            setTodo(" ");
+            //   console.log(newTodos);
+        }
+        else {
+            <script>
+                alert("Todo Can not be a blank");
+            </script>
+        }
     };
 
     
